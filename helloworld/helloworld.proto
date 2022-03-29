@@ -1,18 +1,18 @@
-syntax = "proto3"
+syntax = "proto3";
 
 package helloworld;
 
 service HelloWorld{
     //hello world example, super simple
-    rpc echoMessage(HelloWorldRequest) returns HelloWorldResponse {}
+    rpc requestGreeting(HelloWorldRequest) returns (HelloWorldResponse) {}
 }
 
 
-Message HelloWorldRequest{
+message HelloWorldRequest{
     string time_of_day = 1;
 }
 
 
-Message HelloWorldResponse{
-    string Greeting = 1;
+message HelloWorldResponse{
+    string greeting = 1;
 }
