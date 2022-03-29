@@ -1,0 +1,18 @@
+syntax = "proto3"
+
+package helloworld;
+
+service HelloWorld{
+    //hello world example, super simple
+    rpc echoMessage(HelloWorldRequest) returns HelloWorldResponse {}
+}
+
+
+Message HelloWorldRequest{
+    string time_of_day = 1;
+}
+
+
+Message HelloWorldResponse{
+    string Greeting = 1;
+}
